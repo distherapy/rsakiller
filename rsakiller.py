@@ -21,11 +21,13 @@
  MA 02110-1301, USA.
 '''  
 
-from prime_list import prime_search, largest_prime, set_maths
+from prime_func import prime_search, largest_prime, primality
+from ops import set_maths
 
 #print(prime_search())
 #print(largest_prime(46357573574653))
-
-print(set_maths())
-
+#print(primality(46357573574653))
+print(sets_mult())
+print(sets_single())
 #print(f'{rsa:,d}')
+
