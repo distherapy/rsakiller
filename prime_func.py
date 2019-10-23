@@ -32,9 +32,4 @@ def largest_prime(n):
     print(largest_prime())
 
 def primality(n):
-    d = 2
-    while d * d <= n:
-        if n % d == 0:
-            return False
-        d += 1
-    return n > 1
+	return 2 in [n,2**n%n]
