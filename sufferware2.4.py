@@ -154,7 +154,11 @@ def set_maths():
 	elif h == '**':
 		for key in dict_arrays1:
 			v = dict_arrays1[key] ** dict_arrays0[x]
-			print(v)			
+			print(v)
+	elif h == '%':
+		for key in dict_arrays1:
+			v = dict_arrays1[key] % dict_arrays0[x]
+			print(v)	
 	else:
 		print('error...')
 	
