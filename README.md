@@ -1,1 +1,1 @@
-# rsakiller is to eventually discover an algorithm for rapid factoring
+#break RSA in polynomial time
