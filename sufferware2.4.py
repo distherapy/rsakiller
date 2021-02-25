@@ -1,7 +1,7 @@
 #!/usr/bin/env python
  # rsakiller.py
  
- # copyright October 1, 2019 sixie6e@dectaskforce
+ # copyleft October 1, 2019 sixie6e@dectaskforce
  
 
 import math
