@@ -6,4 +6,4 @@
 
 # If RSA is broken, then two majorly depraved entities cannot move material - governments and other child predators. 
 
-# Math consists of patterns. predictions. repetition. The greatest minds and many combinations of them have been trying to do this for a long time. I'm probably not going to be successful but I'd rather be working on this than listening to the trivial, simpleminded, degenerate conversations you people have about snacks, celebrities, and politicians.
+# Math consists of patterns and predictions. The greatest minds and many combinations of them have been trying to do this for a long time. I'm probably not going to be successful but I'd rather be working on this than listening to the trivial, simpleminded, degenerate conversations you people have about snacks, celebrities, and politicians.
