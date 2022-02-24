@@ -7,6 +7,7 @@ import math
 import numpy as np
 import PySimpleGUI as psg
 import datetime
+import turtle
 
 rsa617 = 22701801293785014193580405120204586741061235962766583907094021879215171483119139894870133091111044901683400949483846818299518041763507948922590774925466088171879259465921026597046700449819899096862039460017743094473811056991294128542891880855362707407670722593737772666973440977361243336397308051763091506836310795312607239520365290032105848839507981452307299417185715796297454995023505316040919859193718023307414880446217922800831766040938656344571034778553457121080530736394535923932651866030515041060966437313323672831539323500067937107541955437362433248361242525945868802353916766181532375855504886901432221349733
 
@@ -198,6 +199,62 @@ csf = {[1,1]:[2,557],
     [1,4]:[73,673],
     [1,5]:[97,701]
 }
-
 set_maths()
+
+# grid_elements = list(set_maths())
+# grid_elements replace 1s
+grid = []
+grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+grid.append([1, 1, 1, 1, 1, 1, 1, 1, 1])
+grid.append([1, 1, 1, 1, 1, 1, 1, 1, 1])
+grid.append([1, 1, 1, 1, 1, 1, 1, 1, 1])
+grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+
+outline = turtle.Turtle()
+outline.tracer(0)
+outline.speed(0)
+outline.color("#ffffff")
+outline.hideturtle()
+topLeft_x=-150
+topLeft_y=150
+
+def numbers(message,x,y,size):
+    FONT = ('Verdana', size, 'normal')
+    outline.penup()
+    outline.goto(x,y)    		  
+    outline.write(message,align="left",font=FONT)
+
+def boxes(grid):
+  box_spacing=20
+  for row in range(0,13):
+    if (row%3)==0:
+      outline.pensize(3)
+    else:
+      outline.pensize(1)
+    outline.penup()
+    outline.goto(topLeft_x,topLeft_y-row*box_spacing)
+    outline.pendown()
+    outline.goto(topLeft_x+12*box_spacing,topLeft_y-row*box_spacing)
+  for col in range(0,10):
+    if (col%3)==0:
+      outline.pensize(3)
+    else:
+      outline.pensize(1)    
+    outline.penup()
+    outline.goto(topLeft_x+col*box_spacing,topLeft_y)
+    outline.pendown()
+    outline.goto(topLeft_x+col*box_spacing,topLeft_y-9*box_spacing)
+
+  for row in range (0,13):
+      for col in range (0,9):
+        if grid[row][col]!=0:
+          text(grid[row][col],topLeft_x+col*box_spacing+9,topLeft_y-row*box_spacing-box_spacing+8,18)
+
 psg.Popup(datetime.datetime.now())
