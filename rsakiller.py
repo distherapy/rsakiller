@@ -225,35 +225,35 @@ topLeft_x=-150
 topLeft_y=150
 
 def numbers(message,x,y,size):
-    FONT = ('Verdana', size, 'normal')
-    outline.penup()
-    outline.goto(x,y)    		  
-    outline.write(message,align="left",font=FONT)
+	FONT = ('Verdana', size, 'normal')
+	outline.penup()
+	outline.goto(x,y)
+	outline.write(message,align="left",font=FONT)
 
 def boxes(grid):
-  box_spacing=20
-  for row in range(0,13):
-    if (row%3)==0:
-      outline.pensize(3)
-    else:
-      outline.pensize(1)
-    outline.penup()
-    outline.goto(topLeft_x,topLeft_y-row*box_spacing)
-    outline.pendown()
-    outline.goto(topLeft_x+12*box_spacing,topLeft_y-row*box_spacing)
-  for col in range(0,10):
-    if (col%3)==0:
-      outline.pensize(3)
-    else:
-      outline.pensize(1)    
-    outline.penup()
-    outline.goto(topLeft_x+col*box_spacing,topLeft_y)
-    outline.pendown()
-    outline.goto(topLeft_x+col*box_spacing,topLeft_y-9*box_spacing)
-
-  for row in range (0,13):
-      for col in range (0,9):
-        if grid[row][col]!=0:
-          text(grid[row][col],topLeft_x+col*box_spacing+9,topLeft_y-row*box_spacing-box_spacing+8,18)
+	box_spacing=20
+	for row in range(0,10):
+		if (row%3)==0:
+			outline.pensize(3)
+		else:
+			outline.pensize(1)
+			outline.penup()
+			outline.goto(topLeft_x, topLeft_y - row * box_spacing)
+			outline.pendown()
+			outline.goto(topLeft_x + 9 * box_spacing , topLeft_y - row * box_spacing)
+	for col in range(0,10):
+		if (col%3)==0:
+			outline.pensize(3)
+		else:
+			outline.pensize(1)
+			outline.penup()
+			outline.goto(topLeft_x + col * box_spacing, topLeft_y)
+			outline.pendown()
+			outline.goto(topLeft_x + col * box_spacing, topLeft_y - 9 * box_spacing)
+	
+	for row in range (0,10):
+		for col in range (0,9):
+			if grid[row][col]!=0:
+				text(grid[row][col], topLeft_x + col * box_spacing + 9, topLeft_y - row * box_spacing - box_spacing + 8,18)
 
 psg.Popup(datetime.datetime.now())
