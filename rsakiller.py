@@ -202,20 +202,17 @@ csf = {[1,1]:[2,557],
 set_maths()
 
 # grid_elements = list(set_maths())
-# grid_elements replace 1s
+
 grid = []
-grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
-grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
-grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
-grid.append([1, 1, 1, 1, 1, 1, 1, 1, 1])
-grid.append([1, 1, 1, 1, 1, 1, 1, 1, 1])
-grid.append([1, 1, 1, 1, 1, 1, 1, 1, 1])
-grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
-grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
-grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
-grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
-grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
-grid.append([0, 0, 0, 1, 1, 1, 0, 0, 0])
+grid.append([96, 95, 94, 93, 92, 91, 90, 89, 88])
+grid.append([64, 63, 62, 61, 60, 59, 58, 57, 56])
+grid.append([65, 36, 35, 34, 33, 32, 31, 30, 55])
+grid.append([66, 37, 17, 16, 15, 14, 13, 29, 54])
+grid.append([67, 38, 18, 5, 4, 3, 12, 28, 53])
+grid.append([68, 39, 19, 6, 1, 2, 11, 27, 52])
+grid.append([69, 40, 20, 7, 8, 9, 10, 26, 51])
+grid.append([70, 41, 21, 22, 23, 24, 25, 49, 50])
+grid.append([71, 42, 43, 44, 45, 46, 47, 48, 49])
 
 outline = turtle.Turtle()
 outline.tracer(0)
