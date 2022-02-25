@@ -200,7 +200,9 @@ csf = {[1,1]:[2,557],
     [1,5]:[97,701]
 }
 set_maths()
+
 # grid_elements = list(set_maths())
+
 grid = []
 grid.append([64, 63, 62, 61, 60, 59, 58, 57, 56])
 grid.append([65, 36, 35, 34, 33, 32, 31, 30, 55])
@@ -224,7 +226,7 @@ def numbers(m, x, y, size):
 	FONT = ('Verdana', size, 'normal')
 	outline.penup()
 	outline.goto(x,y)
-	outline.write(m, align="left", font=FONT)
+	outline.write(m, align="center", font=FONT)
 
 def boxes(grid):
 	box_spacing=20
