@@ -200,11 +200,8 @@ csf = {[1,1]:[2,557],
     [1,5]:[97,701]
 }
 set_maths()
-
 # grid_elements = list(set_maths())
-# grid_elements replace 1s
 grid = []
-
 grid.append([64, 63, 62, 61, 60, 59, 58, 57, 56])
 grid.append([65, 36, 35, 34, 33, 32, 31, 30, 55])
 grid.append([66, 37, 17, 16, 15, 14, 13, 29, 54])
@@ -215,25 +212,24 @@ grid.append([70, 41, 21, 22, 23, 24, 25, 49, 50])
 grid.append([71, 42, 43, 44, 45, 46, 47, 48, 49])
 grid.append([72, 72, 73, 74, 75, 76, 77, 78, 79])
 
-
 outline = turtle.Turtle()
 outline.tracer(0)
 outline.speed(0)
-outline.color("#ffffff")
+outline.color("#c4c4c4")
 outline.hideturtle()
 topLeft_x=-150
 topLeft_y=150
 
-def numbers(message,x,y,size):
+def numbers(m, x, y, size):
 	FONT = ('Verdana', size, 'normal')
 	outline.penup()
 	outline.goto(x,y)
-	outline.write(message,align="left",font=FONT)
+	outline.write(m, align="left", font=FONT)
 
 def boxes(grid):
 	box_spacing=20
-	for row in range(0,10):
-		if (row%3)==0:
+	for row in range(0, 10):
+		if (row % 3) == 0:
 			outline.pensize(3)
 		else:
 			outline.pensize(1)
@@ -241,8 +237,8 @@ def boxes(grid):
 			outline.goto(topLeft_x, topLeft_y - row * box_spacing)
 			outline.pendown()
 			outline.goto(topLeft_x + 9 * box_spacing , topLeft_y - row * box_spacing)
-	for col in range(0,10):
-		if (col%3)==0:
+	for col in range(0, 10):
+		if (col % 3) == 0:
 			outline.pensize(3)
 		else:
 			outline.pensize(1)
@@ -250,7 +246,7 @@ def boxes(grid):
 			outline.goto(topLeft_x + col * box_spacing, topLeft_y)
 			outline.pendown()
 			outline.goto(topLeft_x + col * box_spacing, topLeft_y - 9 * box_spacing)
-	
+
 	for row in range (0,10):
 		for col in range (0,9):
 			if grid[row][col]!=0:
