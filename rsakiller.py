@@ -185,6 +185,10 @@ def set_maths():
 		print(sets[x] ** sets[a])
 	else:
 		print('error...') '''
+
+set_maths()
+
+# ^3 changes based on set_maths
 		
 cp = {[1,1]:[2,577],
     [1,2]:[11,557],
@@ -199,9 +203,9 @@ csf = {[1,1]:[2,557],
     [1,4]:[73,673],
     [1,5]:[97,701]
 }
-set_maths()
 
 # grid_elements = list(set_maths())
+# need to expand grid^2
 
 grid = []
 grid.append([ϕϕ,ϕϕ,ϕϕ,ϕϕ,61,ϕϕ,59,ϕϕ,ϕϕ])
